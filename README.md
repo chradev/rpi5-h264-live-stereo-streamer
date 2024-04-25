@@ -66,7 +66,9 @@ In index.html:
 
 For watching video as stereo use VR like glasses with dual optical lens and smartphone running browser on a full screen.
 
-![RPi 5 server snapshot](https://github.com/chradev/rpi5-h264-live-stereo-streamer/blob/master/samples/snapshot.png)
+![All staff snapshot](https://github.com/chradev/rpi5-h264-live-stereo-streamer/blob/master/samples/snapshot.png)
+
+The snapshot above shows both the streaming server processes and htop on RPi 5 via SSH PuTTY terminals on the Windows 11 desktop, as well as stereo h264 video in the Chrome browser.
 
 
 # Motivation of original project
