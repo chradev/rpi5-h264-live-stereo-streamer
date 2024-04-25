@@ -61,6 +61,8 @@ In index.html:
  * Start camera 0 on port 8080: node server-rpi.js 0 8080
  * Start camera 1 on port 8081: node server-rpi.js 0 8081
  * Watch stereo h264 video on: http://192.168.1.111:8080/
+ * Watch video from camera 0: http://192.168.1.111:8080/index-ss.html
+ * Watch video from camera 1: http://192.168.1.111:8081/index-ss.html
 
 For watching video as stereo use VR like glasses with dual optical lens and smartphone running browser on a full screen.
 

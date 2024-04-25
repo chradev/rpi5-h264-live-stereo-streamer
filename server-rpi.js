@@ -18,7 +18,7 @@ var ip = require('underscore')
 
 const camNr = process.argv[2];
 const portN = process.argv[3];
-console.log("Watch camera Nr: " + camNr + " on http://" + ip + ":" + portN);
+console.log("Watch camera " + camNr + " on http://" + ip + ":" + portN);
 
 const WebStreamerServer = require('./lib/raspivid');
 
@@ -28,8 +28,8 @@ const app  = express();
 app.use(express.static(__dirname + '/public'));
 app.use(express.static(__dirname + '/vendor/dist'));
 
-const server  = http.createServer(app);
-const silence = new WebStreamerServer( server, 
+const server = http.createServer(app);
+const wsssrv = new WebStreamerServer( server, 
     {cam: camNr, fps: 30, width: 960, height: 1080}
 );
 
