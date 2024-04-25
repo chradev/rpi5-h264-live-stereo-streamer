@@ -71,9 +71,10 @@ For watching video as stereo use VR like glasses with dual optical lens and smar
 
 The snapshot above shows both the streaming server processes and htop on RPi 5 via SSH PuTTY terminals on the Windows 11 desktop, as well as stereo h264 video of RPi 5 desktop and xclock (updated every 50ms) in the Chrome browser and Windows 11 system clock (updated every 1s). Video streams resolution was limited to 960 x 1080 px. The snapshot was taken from a video clip of the whole Windows 11 desktop. The following facts may be noted:
 
+ * The time latency measured as a delay between the clocks of the RPi 5 and Windows 11 is 0.1-0.2 sec;
+ * The network load calculated by [**Video Bitrate Calculator**](https://www.dr-lex.be/info-stuff/videocalc.html) is less than 10 Mbps;
  * RPi 5 load is 19-29% for all 4 CPU cores, and complete memory usage is less than 32%;
- * RPi 5 load goes up to 100% for all 4 CPU cores in the case of a single stream from an 8MP camera;
- * The time latency measured as a delay between the clocks of the RPi 5 and Windows 11 is 0.1-0.2 sec.
+ * RPi 5 load goes up to 100% for all 4 CPU cores in the case of a single stream from an 8MP camera.
 
 
 # Motivation of the original project
