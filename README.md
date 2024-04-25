@@ -2,10 +2,10 @@
 
 The parent project is an excellent solution for near-real-time video capturing, encoding and streaming. Extending it to reach the robot's stereo vision requirements is a challenge that could be solved thanks to advances in embedded and mobile devices supporting video processing with hardware acceleration.
 
-The main goals of extending the project are:
-  * The new PRi 5 board is much more powerful and supports two CSI cameras;
+The main reasons for extending the project are:
+  * The new PRi 5 board is much more powerful and supports two 8 or 12 MP CSI cameras;
   * There is a new set of feature-rich utilities (rpicam-apps) supporting the video processing;
-  * Extremely low latency is a main reason to choose the project for the robot stereo vision.
+  * Extremely low latency is a main reason for choosing the project for stereo vision of a robot.
 
 # Basic changes
 
@@ -55,7 +55,7 @@ In index.html:
     </script>
 ```
 
-Old index.html is renamed as index-ss.html and can be used as in original project.
+The old index.html file is renamed as index-ss.html and can be used as in the original project.
 
 # Basic changes usage
 
