@@ -17,7 +17,7 @@ const silence = new WebStreamerServer( server,
 );
 ```
 
-In raspivid.js:
+In lib/raspivid.js:
 ```Javascript
     var streamer = spawn('rpicam-vid', [        // new rpicam-apps utility
         '--camera', this.options.cam,           // requred to select camera
@@ -33,7 +33,7 @@ In raspivid.js:
     ]);
 ```
 
-In index.html:
+In public/index.html:
 ```HTML
   <!-- provide WSAvcPlayer -->
     <script type="text/javascript" src="http-live-player.js">;</script>
@@ -55,17 +55,16 @@ In index.html:
     </script>
 ```
 
-The old index.html file is renamed as index-ss.html and can be used as in the original project.
-
 # Basic changes usage
 
- * Start camera 0 on port 8080: node server-rpi.js 0 8080
- * Start camera 1 on port 8081: node server-rpi.js 1 8081
- * Watch stereo h264 video on: http://192.168.1.111:8080/
- * Watch video from camera 0: http://192.168.1.111:8080/index-ss.html
- * Watch video from camera 1: http://192.168.1.111:8081/index-ss.html
+For watching a stereo video use VR like glasses with dual optical lens, smartphone running browser on a full screen and two streaming processes from RPi 5 CSI cameras:
+ * Start camera 0 stream via WS on port 8080: node server-rpi.js 0 8080
+ * Start camera 1 stream via WS on port 8081: node server-rpi.js 1 8081
+ * Watch stereo video in browser on address: http://<RPi5-IP>:8080/
 
-For watching video as stereo use VR like glasses with dual optical lens and smartphone running browser on a full screen.
+The old index.html file is renamed as index-ss.html and can be used as in the original project:
+ * Watch video from camera 0: http://<RPi5-IP>:8080/index-ss.html
+ * Watch video from camera 1: http://<RPi5-IP>:8081/index-ss.html
 
 ![All staff snapshot](https://github.com/chradev/rpi5-h264-live-stereo-streamer/blob/master/samples/snapshot.png)
 
