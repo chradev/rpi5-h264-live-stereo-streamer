@@ -68,10 +68,11 @@ For watching video as stereo use VR like glasses with dual optical lens and smar
 
 ![All staff snapshot](https://github.com/chradev/rpi5-h264-live-stereo-streamer/blob/master/samples/snapshot.png)
 
-The snapshot above shows both the streaming server processes and htop on RPi 5 via SSH PuTTY terminals on the Windows 11 desktop, as well as stereo h264 video in the Chrome browser and system clock. The snapshot was taken from a Windows 11 desktop video clip. The following facts may be noted:
+The snapshot above shows both the streaming server processes and htop on RPi 5 via SSH PuTTY terminals on the Windows 11 desktop, as well as stereo h264 video of RPi 5 desktop and xclock (updated every 50ms) in the Chrome browser and Windows 11 system clock (updated every 1s). Video streams resolution was limited to 960 x 1080 px. The snapshot was taken from a video clip of the whole Windows 11 desktop. The following facts may be noted:
 
- * CPU load is 19-29% for all 4 cores and complete memory load is less than 32%;
- * The time latency measured as RPi 5 and Windows desktop clocks delay is 0.1-0.2 sec.
+ * RPi 5 load is 19-29% for all 4 CPU cores, and complete memory usage is less than 32%;
+ * RPi 5 load goes up to 100% for all 4 CPU cores in the case of a single stream from an 8MP camera;
+ * The time latency measured as a delay between the clocks of the RPi 5 and Windows 11 is 0.1-0.2 sec.
 
 
 # Motivation of the original project
