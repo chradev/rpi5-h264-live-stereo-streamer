@@ -60,11 +60,11 @@ In public/index.html:
 For watching a stereo video use VR like glasses with dual optical lens, smartphone running browser on a full screen and two streaming processes from RPi 5 CSI cameras:
  * Start camera 0 stream via WS on port 8080: node server-rpi.js 0 8080
  * Start camera 1 stream via WS on port 8081: node server-rpi.js 1 8081
- * Watch stereo video in browser on address: http://<RPi5-IP>:8080/
+ * Watch stereo video in browser on address: http://RPi5-IP:8080/
 
 The old index.html file is renamed as index-ss.html and can be used as in the original project:
- * Watch video from camera 0: http://<RPi5-IP>:8080/index-ss.html
- * Watch video from camera 1: http://<RPi5-IP>:8081/index-ss.html
+ * Watch video from camera 0: http://RPi5-IP:8080/index-ss.html
+ * Watch video from camera 1: http://RPi5-IP:8081/index-ss.html
 
 ![All staff snapshot](https://github.com/chradev/rpi5-h264-live-stereo-streamer/blob/master/samples/snapshot.png)
 
