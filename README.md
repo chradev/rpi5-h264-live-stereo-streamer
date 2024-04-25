@@ -68,10 +68,13 @@ For watching video as stereo use VR like glasses with dual optical lens and smar
 
 ![All staff snapshot](https://github.com/chradev/rpi5-h264-live-stereo-streamer/blob/master/samples/snapshot.png)
 
-The snapshot above shows both the streaming server processes and htop on RPi 5 via SSH PuTTY terminals on the Windows 11 desktop, as well as stereo h264 video in the Chrome browser.
+The snapshot above shows both the streaming server processes and htop on RPi 5 via SSH PuTTY terminals on the Windows 11 desktop, as well as stereo h264 video in the Chrome browser. The following facts may be noted:
+
+ * CPU load is 19-27% for all 4 cores and complete memory load is less than 32%;
+ * The time latency cannot be measured because of the Windows clock visualization delay.
 
 
-# Motivation of original project
+# Motivation of the original project
 
 This is a very simple h264 video player (that can run on live stream) for your browser.
 You might use this with raspicam raw h264 stream.
