@@ -3,28 +3,49 @@
     <title>h264-live-player web client demo</title>
   </head>
   <body>
-
-    <button type="button" onclick="wsavc.playStream()">Start Video</button>
-    <button type="button" onclick="wsavc.stopStream()">Stop Video</button>
-    <button type="button" onclick="wsavc.disconnect()">Disconnect</button>
-    <br/>
+    <table>
+      <tbody>
+        <tr style="height: 100%;">
+          <td style="width: 50%;">
+            <div style="display:none;" >
+              <button type="button" onclick="wsavc0.playStream()">Start Video</button>
+              <button type="button" onclick="wsavc0.stopStream()">Stop Video</button>
+              <button type="button" onclick="wsavc0.disconnect()">Disconnect</button>
+              <br/>
+            </div>
+            <canvas width=640 height=720 id="canvas0"></canvas>
+          </td>
+          <td style="width: 50%;">
+            <div style="display:none;" >
+              <button type="button" onclick="wsavc1.playStream()">Start Video</button>
+              <button type="button" onclick="wsavc1.stopStream()">Stop Video</button>
+              <button type="button" onclick="wsavc1.disconnect()">Disconnect</button>
+              <br/>
+            </div>
+            <canvas width=640 height=720 id="canvas1"></canvas>
+          </td>
+        </tr>
+      </tbody>
+    </table>
 
   <!-- provide WSAvcPlayer -->
     <script type="text/javascript" src="http-live-player.js">;</script>
     <script type="text/javascript">
-
-var canvas = document.createElement("canvas");
-document.body.appendChild(canvas);
-
-// Create h264 player
-var uri = "ws://" + document.location.host;
-var wsavc = new WSAvcPlayer(canvas, "webgl", 1, 35);
-wsavc.connect(uri);
-
-
-//expose instance for button callbacks
-window.wsavc = wsavc;
-
+        var canvas0 = document.getElementById("canvas0");
+        var canvas1 = document.getElementById("canvas1");
+        // Create h264 player
+        var uri0 = "ws://" + document.location.hostname + ":8080";
+        var uri1 = "ws://" + document.location.hostname + ":8081";
+        var wsavc0 = new WSAvcPlayer(canvas0, "webgl", 1, 35);
+        var wsavc1 = new WSAvcPlayer(canvas1, "webgl", 2, 35);
+        wsavc0.connect(uri0);
+        wsavc1.connect(uri1);
+        //expose instance for button callbacks
+        window.wsavc0 = wsavc0;
+        window.wsavc1 = wsavc1;
+        wsavc0.playStream();
+        wsavc1.playStream();
     </script>
   </body>
 </html>
+
