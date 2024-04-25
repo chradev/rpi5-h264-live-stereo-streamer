@@ -66,6 +66,7 @@ In index.html:
 
 For watching video as stereo use VR like glasses with dual optical lens and smartphone running browser on a full screen.
 
+![RPi 5 server snapshot](https://github.com/chradev/rpi5-h264-live-stereo-streamer/blob/master/samples/snapshot.png)
 
 
 # Motivation of original project
