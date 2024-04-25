@@ -55,11 +55,12 @@ In index.html:
     </script>
 ```
 
+Old index.html is renamed as index-ss.html and can be used as in original project.
 
 # Basic changes usage
 
  * Start camera 0 on port 8080: node server-rpi.js 0 8080
- * Start camera 1 on port 8081: node server-rpi.js 0 8081
+ * Start camera 1 on port 8081: node server-rpi.js 1 8081
  * Watch stereo h264 video on: http://192.168.1.111:8080/
  * Watch video from camera 0: http://192.168.1.111:8080/index-ss.html
  * Watch video from camera 1: http://192.168.1.111:8081/index-ss.html

@@ -16,8 +16,8 @@ var ip = require('underscore')
     .value()
     .address;
 
-const camNr = process.argv[2];
-const portN = process.argv[3];
+const camNr = process.argv[2] ? process.argv[2] : 0;
+const portN = process.argv[3] ? process.argv[3] : 8080;
 console.log("Watch camera " + camNr + " on http://" + ip + ":" + portN);
 
 const WebStreamerServer = require('./lib/raspivid');
